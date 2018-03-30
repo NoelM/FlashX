@@ -31,16 +31,16 @@ using namespace fg;
 
 namespace {
     typedef std::pair<double, double> distpair;
-    static unsigned NUM_COLS;
-    static unsigned NUM_ROWS;
-    static unsigned K;
-    static unsigned g_num_changed = 0;
+    static unsigned long NUM_COLS;
+    static unsigned long NUM_ROWS;
+    static unsigned long K;
+    static unsigned long g_num_changed = 0;
     static struct timeval start, end;
     static std::map<vertex_id_t, unsigned> g_init_hash; // Used for forgy init
-    static unsigned  g_kmspp_cluster_idx; // Used for kmeans++ init
-    static unsigned g_kmspp_next_cluster; // Sample row selected as the next cluster
+    static unsigned long g_kmspp_cluster_idx; // Used for kmeans++ init
+    static unsigned long g_kmspp_next_cluster; // Sample row selected as the next cluster
     static std::vector<double> g_kmspp_distance; // Used for kmeans++ init
-    static unsigned g_iter;
+    static unsigned long g_iter;
     static bool g_even_iter;
 
     enum dist_type_t { EUCL, COS }; // Euclidean, Cosine distance

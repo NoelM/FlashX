@@ -20,8 +20,8 @@
  * limitations under the License.
  */
 
-#include <limits.h>
-#include <stdlib.h>
+#include <cstdint>
+#include <limits>
 
 namespace fg
 {
@@ -30,9 +30,9 @@ namespace fg
   * \brief Basic data types used in FlashGraph
 */
 
-typedef unsigned int vsize_t; 
-typedef unsigned int vertex_id_t; /** Used to represent vertex IDs in graph */
-const vertex_id_t MAX_VERTEX_ID = UINT_MAX;
+typedef uint64_t vsize_t; 
+typedef uint64_t vertex_id_t; /** Used to represent vertex IDs in graph */
+const vertex_id_t MAX_VERTEX_ID = std::numeric_limits<vertex_id_t>::max();
 const vertex_id_t INVALID_VERTEX_ID = -1;
 
 }
